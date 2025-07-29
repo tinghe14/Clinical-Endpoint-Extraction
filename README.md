@@ -2,9 +2,9 @@
 This project implements an end-to-end clinical NLP pipeline to extract tumor size and other measurement-related endpoints from oncology pathology reports. It benchmarks rule-based approaches against instruction-tuned large language models (LLaMA) fine-tuned via QLoRA.
 
 ## Project Highlights
-⚙️ Pipeline: End-to-end system from raw pathology report → preprocessing → rule-based extraction → LLM extraction → evaluation.
-🧾 Rule-Based Baseline: Designed regex and pattern-matching extractors for tumor size, which exclude  depth of invasion, and metastatic focus size.
-🧠 Instruction-Tuned Model: Used QLoRA and PyTorch to instruction-tune LLaMA on a labeled corpus of clinical measurement examples.
+1. Pipeline: End-to-end system from raw pathology report → preprocessing → rule-based extraction → LLM extraction → evaluation.
+2. Rule-Based Baseline: Designed regex and pattern-matching extractors for tumor size, which exclude  depth of invasion, and metastatic focus size.
+3. Instruction-Tuned Model: Used QLoRA and PyTorch to instruction-tune LLaMA on a labeled corpus of clinical measurement examples.
 
 ## Tech Stack
 - Python, PyTorch, HuggingFace Transformers, QLoRA
