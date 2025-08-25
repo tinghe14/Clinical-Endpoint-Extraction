@@ -16,33 +16,16 @@ This project implements an end-to-end clinical NLP pipeline to extract tumor siz
 "The tumor measured 3.2 cm in greatest dimension. Depth of invasion: 1.1 cm. Metastatic focus: 0.4 cm."
 - Output: 3.2 cm
 
-## Repo Structure
-
-1. Preprocessing:
-2. Modeling:
-	- Apply rule-based regex system
-	- Apply BERT model
-	- Apply instruct-tuning LLM models
-3. Evaluation
-
-├── data/
-│   ├── raw_reports/
-│   └── annotations/
-├── models/
-│   ├── llama_finetune/
-│   └── rule_based/
-├── scripts/
-│   ├── preprocess.py
-│   ├── extract_rule.py
-│   └── finetune_llama.py
-├── evaluation/
-│   └── evaluate_results.py
-├── README.md
-
 ## How to Run
 1. Fine-tune LLaMA using QLoRA
+```bash
 python scripts/finetune_llama.py --train data/train.json --output_dir models/llama_finetune
-2. Run extraction using fine-tuned model
+```
+3. Run extraction using fine-tuned model
+```bash
 python scripts/extract_llama.py --input data/test.json --model_dir models/llama_finetune
-3. Evaluate performance
+```
+4. Evaluate performance
+```bash
 python evaluation/evaluate_results.py --pred results.json --gold data/test_labels.json
+```
