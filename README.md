@@ -1,4 +1,4 @@
-# 🧬 Tumor Measurement Extraction via Instruction-Tuned LLMs
+🔗  🧬 Tumor Measurement Extraction via Instruction-Tuned LLMs
 This project implements an end-to-end clinical NLP pipeline to extract tumor size and other measurement-related endpoints from oncology pathology reports. It benchmarks rule-based approaches against instruction-tuned large language models (LLaMA) fine-tuned via QLoRA.
 
 ## Project Highlights
